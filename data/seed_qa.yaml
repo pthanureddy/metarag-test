@@ -1,0 +1,80 @@
+- id: q01
+  question: "What is the main purpose of the Govern function?"
+  gold_answer: "The Govern function sets policies, roles, responsibilities, accountability, and lifecycle oversight for trustworthy AI risk management."
+  supporting_section: "Govern Function"
+- id: q02
+  question: "Why does the Map function come before measurement?"
+  gold_answer: "The Map function defines purpose, context, stakeholders, assumptions, and harms so later measurement is tied to the deployment environment."
+  supporting_section: "Map Function"
+- id: q03
+  question: "What types of evidence belong in the Measure function?"
+  gold_answer: "The Measure function uses testing, evaluation, validation, uncertainty documentation, impact assessment, and monitoring evidence."
+  supporting_section: "Measure Function"
+- id: q04
+  question: "What decisions are part of the Manage function?"
+  gold_answer: "The Manage function prioritizes and responds to AI risks through mitigation, acceptance, transfer, avoidance, incident response, and monitoring."
+  supporting_section: "Manage Function"
+- id: q05
+  question: "What does valid and reliable mean for an AI system?"
+  gold_answer: "A valid and reliable AI system performs as intended in its stated context and maintains acceptable performance across expected conditions."
+  supporting_section: "Valid and Reliable"
+- id: q06
+  question: "What kinds of harm are included in AI safety?"
+  gold_answer: "AI safety considers unacceptable physical, psychological, economic, environmental, and societal harms from expected use or foreseeable misuse."
+  supporting_section: "Safe"
+- id: q07
+  question: "What does secure and resilient AI need to withstand?"
+  gold_answer: "Secure and resilient AI should resist, respond to, and recover from attacks, failures, adversarial manipulation, or unexpected conditions."
+  supporting_section: "Secure and Resilient"
+- id: q08
+  question: "What makes AI accountability traceable?"
+  gold_answer: "Accountability is traceable through assigned responsibility, documentation, clear decisions, meaningful explanations, and records suitable for review."
+  supporting_section: "Accountable and Transparent"
+- id: q09
+  question: "Why does explanation depth depend on context?"
+  gold_answer: "The needed explanation depends on risk, user expertise, decision impact, and the purpose for which the explanation is used."
+  supporting_section: "Explainable and Interpretable"
+- id: q10
+  question: "How can privacy-enhanced AI reduce privacy risk?"
+  gold_answer: "Privacy-enhanced AI reduces risk through data minimization, access limits, secure processing, and lifecycle privacy evaluation."
+  supporting_section: "Privacy Enhanced"
+- id: q11
+  question: "How is harmful bias managed in AI systems?"
+  gold_answer: "Harmful bias is managed through representative data practices, subgroup evaluation, impact assessment, stakeholder feedback, and mitigation."
+  supporting_section: "Fair with Harmful Bias Managed"
+- id: q12
+  question: "Why is documentation important for AI risk management?"
+  gold_answer: "Documentation links assumptions, data choices, model behavior, tests, limitations, and mitigations so audits and maintenance are possible."
+  supporting_section: "Documentation and Traceability"
+- id: q13
+  question: "Why do AI systems need continuous monitoring after deployment?"
+  gold_answer: "Continuous monitoring is needed because data, users, and environments can drift, changing performance, fairness, safety, or security risks."
+  supporting_section: "Continuous Monitoring"
+- id: q14
+  question: "What makes human oversight meaningful?"
+  gold_answer: "Human oversight is meaningful when people can practically review, contest, approve, or stop AI behavior rather than acting as symbolic controls."
+  supporting_section: "Human Oversight"
+- id: q15
+  question: "What should organizations do about third-party AI components?"
+  gold_answer: "Organizations should manage third-party AI risk through supplier documentation, contracts, testing, monitoring, and contingency planning."
+  supporting_section: "Third-Party Risk"
+- id: q16
+  question: "Which function connects risk management to leadership decisions?"
+  gold_answer: "The Govern function connects risk management to leadership decisions through accountability, policy, roles, and escalation paths."
+  supporting_section: "Govern Function"
+- id: q17
+  question: "Which function identifies affected stakeholders and deployment context?"
+  gold_answer: "The Map function identifies affected stakeholders, intended purpose, deployment context, assumptions, benefits, and potential harms."
+  supporting_section: "Map Function"
+- id: q18
+  question: "Which trustworthy AI characteristics can be measured besides performance?"
+  gold_answer: "Measurement can address robustness, fairness, explainability, privacy, safety, and other trustworthy AI characteristics."
+  supporting_section: "Measure Function"
+- id: q19
+  question: "How should risk management decisions relate to risk criteria?"
+  gold_answer: "Risk management decisions should be traceable to documented risk criteria and monitored after response actions are chosen."
+  supporting_section: "Manage Function"
+- id: q20
+  question: "What triggers review during continuous monitoring?"
+  gold_answer: "Review should be triggered when monitoring thresholds are crossed or risk conditions change in deployment."
+  supporting_section: "Continuous Monitoring"

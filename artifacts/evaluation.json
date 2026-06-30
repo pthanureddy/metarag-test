@@ -1,0 +1,961 @@
+{
+  "summary": {
+    "total_seed_questions": 20,
+    "groundedness_accuracy": 1.0,
+    "hallucination_catch_rate": 1.0,
+    "metamorphic_violation_rate": 0.0,
+    "mean_flakiness_variance": 0.0,
+    "ragas_agreement": 1.0,
+    "chroma_persisted": false,
+    "openai_judge_included": false,
+    "estimated_cost_usd": 0.0
+  },
+  "cases": [
+    {
+      "id": "q01",
+      "question": "What is the main purpose of the Govern function?",
+      "answer": "The Govern function sets policies, roles, responsibilities, accountability, and lifecycle oversight for trustworthy AI risk management.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.9166666666666666,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.9166666666666666,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q02",
+      "question": "Why does the Map function come before measurement?",
+      "answer": "The Map function defines purpose, context, stakeholders, assumptions, and harms so later measurement is tied to the deployment environment.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.7692307692307693,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.7692307692307693,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q03",
+      "question": "What types of evidence belong in the Measure function?",
+      "answer": "The Measure function uses testing, evaluation, validation, uncertainty documentation, impact assessment, and monitoring evidence.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.8333333333333334,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.8333333333333334,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q04",
+      "question": "What decisions are part of the Manage function?",
+      "answer": "The Manage function prioritizes and responds to AI risks through mitigation, acceptance, transfer, avoidance, incident response, and monitoring.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.9230769230769231,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.9230769230769231,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q05",
+      "question": "What does valid and reliable mean for an AI system?",
+      "answer": "A valid and reliable AI system performs as intended in its stated context and maintains acceptable performance across expected conditions.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 1.0,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 1.0,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q06",
+      "question": "What kinds of harm are included in AI safety?",
+      "answer": "AI safety considers unacceptable physical, psychological, economic, environmental, and societal harms from expected use or foreseeable misuse.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.8571428571428571,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.8571428571428571,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q07",
+      "question": "What does secure and resilient AI need to withstand?",
+      "answer": "Secure and resilient AI should resist, respond to, and recover from attacks, failures, adversarial manipulation, or unexpected conditions.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.9230769230769231,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.9230769230769231,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q08",
+      "question": "What makes AI accountability traceable?",
+      "answer": "Accountability is traceable through assigned responsibility, documentation, clear decisions, meaningful explanations, and records suitable for review.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.6923076923076923,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.6923076923076923,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q09",
+      "question": "Why does explanation depth depend on context?",
+      "answer": "The needed explanation depends on risk, user expertise, decision impact, and the purpose for which the explanation is used.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.9090909090909091,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.9090909090909091,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q10",
+      "question": "How can privacy-enhanced AI reduce privacy risk?",
+      "answer": "Privacy-enhanced AI reduces risk through data minimization, access limits, secure processing, and lifecycle privacy evaluation.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.8461538461538461,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.8461538461538461,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q11",
+      "question": "How is harmful bias managed in AI systems?",
+      "answer": "Harmful bias is managed through representative data practices, subgroup evaluation, impact assessment, stakeholder feedback, and mitigation.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.9285714285714286,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.9285714285714286,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q12",
+      "question": "Why is documentation important for AI risk management?",
+      "answer": "Documentation links assumptions, data choices, model behavior, tests, limitations, and mitigations so audits and maintenance are possible.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.7142857142857143,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.7142857142857143,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q13",
+      "question": "Why do AI systems need continuous monitoring after deployment?",
+      "answer": "Continuous monitoring is needed because data, users, and environments can drift, changing performance, fairness, safety, or security risks.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.8,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.8,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q14",
+      "question": "What makes human oversight meaningful?",
+      "answer": "Human oversight is meaningful when people can practically review, contest, approve, or stop AI behavior rather than acting as symbolic controls.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.5294117647058824,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.5294117647058824,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q15",
+      "question": "What should organizations do about third-party AI components?",
+      "answer": "Organizations should manage third-party AI risk through supplier documentation, contracts, testing, monitoring, and contingency planning.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.8571428571428571,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.8571428571428571,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q16",
+      "question": "Which function connects risk management to leadership decisions?",
+      "answer": "The Govern function connects risk management to leadership decisions through accountability, policy, roles, and escalation paths.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.7692307692307693,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.7692307692307693,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q17",
+      "question": "Which function identifies affected stakeholders and deployment context?",
+      "answer": "The Map function identifies affected stakeholders, intended purpose, deployment context, assumptions, benefits, and potential harms.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 1.0,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 1.0,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q18",
+      "question": "Which trustworthy AI characteristics can be measured besides performance?",
+      "answer": "Measurement can address robustness, fairness, explainability, privacy, safety, and other trustworthy AI characteristics.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 1.0,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 1.0,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q19",
+      "question": "How should risk management decisions relate to risk criteria?",
+      "answer": "Risk management decisions should be traceable to documented risk criteria and monitored after response actions are chosen.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.6923076923076923,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.6923076923076923,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    },
+    {
+      "id": "q20",
+      "question": "What triggers review during continuous monitoring?",
+      "answer": "Review should be triggered when monitoring thresholds are crossed or risk conditions change in deployment.",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "score": 0.75,
+      "oracle": "nli-lexical-fallback",
+      "ragas_proxy": {
+        "score": 0.75,
+        "available": false,
+        "method": "lexical-faithfulness-proxy"
+      },
+      "openai_judge": null
+    }
+  ],
+  "corrupted_cases": [
+    {
+      "id": "q01",
+      "question": "What is the main purpose of the Govern function?",
+      "answer": "The Govern function sets policies, roles, responsibilities, accountability, and lifecycle oversight for trustworthy AI risk management.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.16666666666666666,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q02",
+      "question": "Why does the Map function come before measurement?",
+      "answer": "The Map function defines purpose, context, stakeholders, assumptions, and harms so later measurement is tied to the deployment environment.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.07692307692307693,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q03",
+      "question": "What types of evidence belong in the Measure function?",
+      "answer": "The Measure function uses testing, evaluation, validation, uncertainty documentation, impact assessment, and monitoring evidence.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.16666666666666666,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q04",
+      "question": "What decisions are part of the Manage function?",
+      "answer": "The Manage function prioritizes and responds to AI risks through mitigation, acceptance, transfer, avoidance, incident response, and monitoring.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.15384615384615385,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q05",
+      "question": "What does valid and reliable mean for an AI system?",
+      "answer": "A valid and reliable AI system performs as intended in its stated context and maintains acceptable performance across expected conditions.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.14285714285714285,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q06",
+      "question": "What kinds of harm are included in AI safety?",
+      "answer": "AI safety considers unacceptable physical, psychological, economic, environmental, and societal harms from expected use or foreseeable misuse.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.14285714285714285,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q07",
+      "question": "What does secure and resilient AI need to withstand?",
+      "answer": "Secure and resilient AI should resist, respond to, and recover from attacks, failures, adversarial manipulation, or unexpected conditions.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.15384615384615385,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q08",
+      "question": "What makes AI accountability traceable?",
+      "answer": "Accountability is traceable through assigned responsibility, documentation, clear decisions, meaningful explanations, and records suitable for review.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.38461538461538464,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q09",
+      "question": "Why does explanation depth depend on context?",
+      "answer": "The needed explanation depends on risk, user expertise, decision impact, and the purpose for which the explanation is used.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.36363636363636365,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q10",
+      "question": "How can privacy-enhanced AI reduce privacy risk?",
+      "answer": "Privacy-enhanced AI reduces risk through data minimization, access limits, secure processing, and lifecycle privacy evaluation.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.38461538461538464,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q11",
+      "question": "How is harmful bias managed in AI systems?",
+      "answer": "Harmful bias is managed through representative data practices, subgroup evaluation, impact assessment, stakeholder feedback, and mitigation.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.21428571428571427,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q12",
+      "question": "Why is documentation important for AI risk management?",
+      "answer": "Documentation links assumptions, data choices, model behavior, tests, limitations, and mitigations so audits and maintenance are possible.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.14285714285714285,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q13",
+      "question": "Why do AI systems need continuous monitoring after deployment?",
+      "answer": "Continuous monitoring is needed because data, users, and environments can drift, changing performance, fairness, safety, or security risks.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.3333333333333333,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q14",
+      "question": "What makes human oversight meaningful?",
+      "answer": "Human oversight is meaningful when people can practically review, contest, approve, or stop AI behavior rather than acting as symbolic controls.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.11764705882352941,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q15",
+      "question": "What should organizations do about third-party AI components?",
+      "answer": "Organizations should manage third-party AI risk through supplier documentation, contracts, testing, monitoring, and contingency planning.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.35714285714285715,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q16",
+      "question": "Which function connects risk management to leadership decisions?",
+      "answer": "The Govern function connects risk management to leadership decisions through accountability, policy, roles, and escalation paths.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.15384615384615385,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q17",
+      "question": "Which function identifies affected stakeholders and deployment context?",
+      "answer": "The Map function identifies affected stakeholders, intended purpose, deployment context, assumptions, benefits, and potential harms.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.15384615384615385,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q18",
+      "question": "Which trustworthy AI characteristics can be measured besides performance?",
+      "answer": "Measurement can address robustness, fairness, explainability, privacy, safety, and other trustworthy AI characteristics.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.09090909090909091,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q19",
+      "question": "How should risk management decisions relate to risk criteria?",
+      "answer": "Risk management decisions should be traceable to documented risk criteria and monitored after response actions are chosen.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.3076923076923077,
+      "oracle": "nli-lexical-fallback"
+    },
+    {
+      "id": "q20",
+      "question": "What triggers review during continuous monitoring?",
+      "answer": "Review should be triggered when monitoring thresholds are crossed or risk conditions change in deployment.",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "score": 0.4166666666666667,
+      "oracle": "nli-lexical-fallback"
+    }
+  ],
+  "metamorphic": [
+    {
+      "id": "q01",
+      "paraphrase": "In the NIST AI RMF, what is the main purpose of the Govern function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q01",
+      "paraphrase": "Can you explain what is the main purpose of the Govern function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q01",
+      "paraphrase": "What should a practitioner know about this: What is the main purpose of the Govern function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q02",
+      "paraphrase": "In the NIST AI RMF, why does the Map function come before measurement?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q02",
+      "paraphrase": "Can you explain why does the Map function come before measurement?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q02",
+      "paraphrase": "What should a practitioner know about this: Why does the Map function come before measurement?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q03",
+      "paraphrase": "In the NIST AI RMF, what types of evidence belong in the Measure function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q03",
+      "paraphrase": "Can you explain what types of evidence belong in the Measure function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q03",
+      "paraphrase": "What should a practitioner know about this: What types of evidence belong in the Measure function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q04",
+      "paraphrase": "In the NIST AI RMF, what decisions are part of the Manage function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q04",
+      "paraphrase": "Can you explain what decisions are part of the Manage function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q04",
+      "paraphrase": "What should a practitioner know about this: What decisions are part of the Manage function?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q05",
+      "paraphrase": "In the NIST AI RMF, what does valid and reliable mean for an AI system?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q05",
+      "paraphrase": "Can you explain what does valid and reliable mean for an AI system?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q05",
+      "paraphrase": "What should a practitioner know about this: What does valid and reliable mean for an AI system?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q06",
+      "paraphrase": "In the NIST AI RMF, what kinds of harm are included in AI safety?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q06",
+      "paraphrase": "Can you explain what kinds of harm are included in AI safety?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q06",
+      "paraphrase": "What should a practitioner know about this: What kinds of harm are included in AI safety?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q07",
+      "paraphrase": "In the NIST AI RMF, what does secure and resilient AI need to withstand?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q07",
+      "paraphrase": "Can you explain what does secure and resilient AI need to withstand?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q07",
+      "paraphrase": "What should a practitioner know about this: What does secure and resilient AI need to withstand?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q08",
+      "paraphrase": "In the NIST AI RMF, what makes AI accountability traceable?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q08",
+      "paraphrase": "Can you explain what makes AI accountability traceable?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q08",
+      "paraphrase": "What should a practitioner know about this: What makes AI accountability traceable?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q09",
+      "paraphrase": "In the NIST AI RMF, why does explanation depth depend on context?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q09",
+      "paraphrase": "Can you explain why does explanation depth depend on context?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q09",
+      "paraphrase": "What should a practitioner know about this: Why does explanation depth depend on context?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q10",
+      "paraphrase": "In the NIST AI RMF, how can privacy-enhanced AI reduce privacy risk?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q10",
+      "paraphrase": "Can you explain how can privacy-enhanced AI reduce privacy risk?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q10",
+      "paraphrase": "What should a practitioner know about this: How can privacy-enhanced AI reduce privacy risk?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q11",
+      "paraphrase": "In the NIST AI RMF, how is harmful bias managed in AI systems?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q11",
+      "paraphrase": "Can you explain how is harmful bias managed in AI systems?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q11",
+      "paraphrase": "What should a practitioner know about this: How is harmful bias managed in AI systems?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q12",
+      "paraphrase": "In the NIST AI RMF, why is documentation important for AI risk management?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q12",
+      "paraphrase": "Can you explain why is documentation important for AI risk management?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q12",
+      "paraphrase": "What should a practitioner know about this: Why is documentation important for AI risk management?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q13",
+      "paraphrase": "In the NIST AI RMF, why do AI systems need continuous monitoring after deployment?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q13",
+      "paraphrase": "Can you explain why do AI systems need continuous monitoring after deployment?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q13",
+      "paraphrase": "What should a practitioner know about this: Why do AI systems need continuous monitoring after deployment?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q14",
+      "paraphrase": "In the NIST AI RMF, what makes human oversight meaningful?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q14",
+      "paraphrase": "Can you explain what makes human oversight meaningful?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q14",
+      "paraphrase": "What should a practitioner know about this: What makes human oversight meaningful?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q15",
+      "paraphrase": "In the NIST AI RMF, what should organizations do about third-party AI components?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q15",
+      "paraphrase": "Can you explain what should organizations do about third-party AI components?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q15",
+      "paraphrase": "What should a practitioner know about this: What should organizations do about third-party AI components?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q16",
+      "paraphrase": "In the NIST AI RMF, which function connects risk management to leadership decisions?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q16",
+      "paraphrase": "Can you explain which function connects risk management to leadership decisions?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q16",
+      "paraphrase": "What should a practitioner know about this: Which function connects risk management to leadership decisions?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q17",
+      "paraphrase": "In the NIST AI RMF, which function identifies affected stakeholders and deployment context?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q17",
+      "paraphrase": "Can you explain which function identifies affected stakeholders and deployment context?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q17",
+      "paraphrase": "What should a practitioner know about this: Which function identifies affected stakeholders and deployment context?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q18",
+      "paraphrase": "In the NIST AI RMF, which trustworthy AI characteristics can be measured besides performance?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q18",
+      "paraphrase": "Can you explain which trustworthy AI characteristics can be measured besides performance?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q18",
+      "paraphrase": "What should a practitioner know about this: Which trustworthy AI characteristics can be measured besides performance?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q19",
+      "paraphrase": "In the NIST AI RMF, how should risk management decisions relate to risk criteria?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q19",
+      "paraphrase": "Can you explain how should risk management decisions relate to risk criteria?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q19",
+      "paraphrase": "What should a practitioner know about this: How should risk management decisions relate to risk criteria?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q20",
+      "paraphrase": "In the NIST AI RMF, what triggers review during continuous monitoring?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q20",
+      "paraphrase": "Can you explain what triggers review during continuous monitoring?",
+      "similarity": 1.0,
+      "violated": false
+    },
+    {
+      "id": "q20",
+      "paraphrase": "What should a practitioner know about this: What triggers review during continuous monitoring?",
+      "similarity": 1.0,
+      "violated": false
+    }
+  ],
+  "consistency": [
+    {
+      "id": "q01",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q02",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q03",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q04",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q05",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q06",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q07",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q08",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q09",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q10",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q11",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q12",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q13",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q14",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q15",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q16",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q17",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q18",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q19",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    },
+    {
+      "id": "q20",
+      "mean_similarity": 1.0,
+      "variance": 0.0
+    }
+  ]
+}
