@@ -57,6 +57,11 @@ python scripts/run_evaluation.py --use-openai-answers --include-openai-judge
 
 The corpus is public-domain-oriented NIST AI RMF study material and contains no employer code, port data, customer data, or proprietary RAG artifacts. The method, not the domain, is the point of the project.
 
+## Formal Case Study
+
+- [Markdown case study](docs/case-study.md)
+- [PDF case study](docs/case-study.pdf)
+
 ## Limitations
 
 CI uses lightweight deterministic fallbacks so public tests do not require API keys or heavyweight model downloads. Local runs with OpenAI, Chroma, RAGAS, and NLI models produce stronger empirical comparisons.

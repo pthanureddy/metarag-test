@@ -19,6 +19,7 @@ HTML = """<!doctype html>
     main { width: min(1160px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 56px; }
     h1 { font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: 1; margin: 0 0 12px; letter-spacing: 0; }
     p, li { color: #4b5870; line-height: 1.65; }
+    a { color: #1d4ed8; font-weight: 700; }
     .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 24px 0; }
     .metric, .card { background: #fff; border: 1px solid #d9dee8; border-radius: 8px; padding: 16px; }
     .metric strong { display: block; font-size: 2rem; color: #172033; }
@@ -33,9 +34,10 @@ HTML = """<!doctype html>
 <body>
 <main>
   <header>
-    <p><strong>Research prototype</strong> · Metamorphic and groundedness testing for RAG</p>
+    <p><strong>Engineering case study</strong> - Metamorphic and groundedness testing for RAG</p>
     <h1>MetaRAG-Test</h1>
     <p>This static dashboard evaluates a RAG pipeline over a public NIST AI RMF study corpus using groundedness checks, corrupted-context validation, paraphrase metamorphic tests, and consistency scoring.</p>
+    <p><a href="case-study.pdf">Formal PDF case study</a> | <a href="case-study.md">Markdown case study</a></p>
   </header>
 
   <section class="metrics">
