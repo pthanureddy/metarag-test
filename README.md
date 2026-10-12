@@ -64,4 +64,16 @@ The corpus is public-domain-oriented NIST AI RMF study material and contains no 
 
 ## Limitations
 
+### Verified execution boundary
+
+The lightweight run uses stored gold answers and lexical overlap. Its scores
+exercise evaluation mechanics; they are not measured generative-model quality or
+an independent RAGAS assessment. Requested LLM answering fails when the provider
+is unavailable rather than silently substituting a gold answer. The optional
+DeBERTa NLI adapter now selects entailment (class 1) separately from contradiction
+and neutral; controlled-probability regression tests verify that contract without
+downloading model weights. Real NLI/LLM quality, cost and latency are not established
+by those tests. Use model families with the documented class order.
+Model-order reference: https://huggingface.co/cross-encoder/nli-deberta-v3-base.
+
 CI uses lightweight deterministic fallbacks so public tests do not require API keys or heavyweight model downloads. Local runs with OpenAI, Chroma, RAGAS, and NLI models produce stronger empirical comparisons.

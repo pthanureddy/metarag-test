@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 import os
 from dataclasses import dataclass
 
@@ -23,7 +24,9 @@ class NLIOracle:
 
     def __init__(self) -> None:
         self.model_name = os.getenv("NLI_MODEL", "cross-encoder/nli-deberta-v3-base")
-        self.fallback_model_name = os.getenv("NLI_FALLBACK_MODEL", "cross-encoder/nli-deberta-v3-xsmall")
+        self.fallback_model_name = os.getenv(
+            "NLI_FALLBACK_MODEL", "cross-encoder/nli-deberta-v3-xsmall"
+        )
         self._model = None
         self._model_loaded = False
 
@@ -42,19 +45,34 @@ class NLIOracle:
             self._model = None
         return self._model
 
-    def judge(self, question: str, answer: str, contexts: list[Chunk]) -> GroundednessResult:
+    def judge(
+        self, question: str, answer: str, contexts: list[Chunk]
+    ) -> GroundednessResult:
         text = context_text(contexts)
         model = self._load()
         if model is not None:
             try:
-                scores = model.predict([(text, answer)])
+                scores = model.predict([(text, answer)], apply_softmax=True)
                 if hasattr(scores, "tolist"):
                     scores = scores.tolist()
-                entailment_score = float(max(scores[0]) if isinstance(scores[0], list) else scores[0])
+                if (
+                    not isinstance(scores, list)
+                    or len(scores) != 1
+                    or len(scores[0]) != 3
+                ):
+                    raise ValueError("NLI expects three class probabilities")
+                probabilities = [float(value) for value in scores[0]]
+                if not all(
+                    math.isfinite(value) and 0 <= value <= 1 for value in probabilities
+                ) or not math.isclose(sum(probabilities), 1, abs_tol=1e-5):
+                    raise ValueError("Invalid NLI probabilities")
+                # DeBERTa NLI order: contradiction, entailment, neutral.
+                entailment_score = probabilities[1]
                 return GroundednessResult(
-                    grounded=entailment_score >= 0.5,
+                    grounded=entailment_score >= 0.5
+                    and entailment_score > max(probabilities[0], probabilities[2]),
                     score=entailment_score,
-                    reasoning="NLI cross-encoder entailment score",
+                    reasoning="NLI entailment probability (class 1), distinguished from contradiction/neutral",
                     provider=self.provider,
                 )
             except Exception:
@@ -74,9 +92,13 @@ class NLIOracle:
 class OpenAIJudge:
     provider = "openai-judge"
 
-    def judge(self, question: str, answer: str, contexts: list[Chunk]) -> GroundednessResult:
+    def judge(
+        self, question: str, answer: str, contexts: list[Chunk]
+    ) -> GroundednessResult:
         if not os.getenv("OPENAI_API_KEY"):
-            return GroundednessResult(False, 0.0, "OPENAI_API_KEY is not set", self.provider)
+            return GroundednessResult(
+                False, 0.0, "OPENAI_API_KEY is not set", self.provider
+            )
         try:
             from openai import OpenAI
 
@@ -100,7 +122,9 @@ class OpenAIJudge:
                 provider=self.provider,
             )
         except Exception as exc:
-            return GroundednessResult(False, 0.0, f"OpenAI judge failed: {exc}", self.provider)
+            return GroundednessResult(
+                False, 0.0, f"OpenAI judge failed: {exc}", self.provider
+            )
 
 
 def ragas_faithfulness_proxy(answer: str, contexts: list[Chunk]) -> dict:
@@ -117,5 +141,7 @@ def ragas_faithfulness_proxy(answer: str, contexts: list[Chunk]) -> dict:
     return {
         "score": score,
         "available": available,
-        "method": "ragas-installed-proxy" if available else "lexical-faithfulness-proxy",
+        "method": "ragas-installed-proxy"
+        if available
+        else "lexical-faithfulness-proxy",
     }

@@ -25,7 +25,11 @@ class RAGPipeline:
 
     def _match_seed(self, question: str) -> SeedQA:
         scored = [
-            (semantic_similarity(question, qa.question), len(tokens(question) & tokens(qa.question)), qa)
+            (
+                semantic_similarity(question, qa.question),
+                len(tokens(question) & tokens(qa.question)),
+                qa,
+            )
             for qa in self.seed_qas
         ]
         return sorted(scored, key=lambda item: (item[0], item[1]), reverse=True)[0][2]
@@ -36,7 +40,9 @@ class RAGPipeline:
         try:
             from openai import OpenAI
 
-            context_text = "\n\n".join(f"{chunk.section}: {chunk.text}" for chunk in contexts)
+            context_text = "\n\n".join(
+                f"{chunk.section}: {chunk.text}" for chunk in contexts
+            )
             response = OpenAI().responses.create(
                 model=os.getenv("OPENAI_MODEL", "gpt-5.5"),
                 input=(
@@ -49,13 +55,19 @@ class RAGPipeline:
         except Exception:
             return None
 
-    def query(self, question: str, corrupt_context: bool = False, use_openai: bool = False) -> RAGAnswer:
+    def query(
+        self, question: str, corrupt_context: bool = False, use_openai: bool = False
+    ) -> RAGAnswer:
         matched = self._match_seed(question)
         retrieved = self.store.search(question, k=3)
         contexts = [item.chunk for item in retrieved]
         if corrupt_context:
             support_index = next(
-                (i for i, chunk in enumerate(self.chunks) if chunk.section == matched.supporting_section),
+                (
+                    i
+                    for i, chunk in enumerate(self.chunks)
+                    if chunk.section == matched.supporting_section
+                ),
                 0,
             )
             contexts = [
@@ -64,6 +76,10 @@ class RAGPipeline:
             ]
 
         generated = self._openai_answer(question, contexts) if use_openai else None
+        if use_openai and not generated:
+            raise ValueError(
+                "LLM answer unavailable; refusing to substitute a stored gold answer"
+            )
         answer = generated or matched.gold_answer
         return RAGAnswer(
             question=question,
